@@ -16,6 +16,19 @@
     [super dealloc];
 }
 
++ (void)initialize
+{
+	if ([self class] == [AppDelegate class])
+	{
+		// Add an empty favorites array to the NSUserDefaults
+		NSDictionary* dict = [NSDictionary dictionaryWithObjectsAndKeys:
+                              [NSArray array], @"Favorites",
+                              nil];
+        
+		[[NSUserDefaults standardUserDefaults] registerDefaults:dict];
+	}
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.

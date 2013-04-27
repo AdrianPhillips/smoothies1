@@ -17,12 +17,19 @@
 		54C34245172573650048241D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54C34244172573650048241D /* Default@2x.png */; };
 		54C34247172573650048241D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54C34246172573650048241D /* Default-568h@2x.png */; };
 		54C3424A172573650048241D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54C34248172573650048241D /* MainStoryboard.storyboard */; };
-		54C3424D172573650048241D /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C3424C172573650048241D /* FirstViewController.m */; };
 		54C3424F172573650048241D /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 54C3424E172573650048241D /* first.png */; };
 		54C34251172573650048241D /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54C34250172573650048241D /* first@2x.png */; };
-		54C34254172573650048241D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C34253172573650048241D /* SecondViewController.m */; };
 		54C34256172573650048241D /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 54C34255172573650048241D /* second.png */; };
 		54C34258172573650048241D /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54C34257172573650048241D /* second@2x.png */; };
+		54C34264172573DC0048241D /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C3425F172573DC0048241D /* DataModel.m */; };
+		54C34265172573DC0048241D /* EditRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C34261172573DC0048241D /* EditRecipeViewController.m */; };
+		54C34266172573DC0048241D /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C34263172573DC0048241D /* FavoritesViewController.m */; };
+		54C3426D172573E80048241D /* SmoothiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C34268172573E80048241D /* SmoothiesViewController.m */; };
+		54C3426E172573E80048241D /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C3426A172573E80048241D /* Recipe.m */; };
+		54C3426F172573E80048241D /* RecipeDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C3426C172573E80048241D /* RecipeDetailsViewController.m */; };
+		54C34273172574000048241D /* Banana Shake.png in Resources */ = {isa = PBXBuildFile; fileRef = 54C34270172574000048241D /* Banana Shake.png */; };
+		54C34274172574000048241D /* Green Smoothie.png in Resources */ = {isa = PBXBuildFile; fileRef = 54C34271172574000048241D /* Green Smoothie.png */; };
+		54C34275172574000048241D /* Raspberry-Blueberry.png in Resources */ = {isa = PBXBuildFile; fileRef = 54C34272172574000048241D /* Raspberry-Blueberry.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,14 +47,25 @@
 		54C34244172573650048241D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		54C34246172573650048241D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		54C34249172573650048241D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		54C3424B172573650048241D /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		54C3424C172573650048241D /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		54C3424E172573650048241D /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		54C34250172573650048241D /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		54C34252172573650048241D /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		54C34253172573650048241D /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		54C34255172573650048241D /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		54C34257172573650048241D /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		54C3425E172573DC0048241D /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
+		54C3425F172573DC0048241D /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
+		54C34260172573DC0048241D /* EditRecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditRecipeViewController.h; sourceTree = "<group>"; };
+		54C34261172573DC0048241D /* EditRecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditRecipeViewController.m; sourceTree = "<group>"; };
+		54C34262172573DC0048241D /* FavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesViewController.h; sourceTree = "<group>"; };
+		54C34263172573DC0048241D /* FavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
+		54C34267172573E80048241D /* SmoothiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmoothiesViewController.h; sourceTree = "<group>"; };
+		54C34268172573E80048241D /* SmoothiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmoothiesViewController.m; sourceTree = "<group>"; };
+		54C34269172573E80048241D /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
+		54C3426A172573E80048241D /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipe.m; sourceTree = "<group>"; };
+		54C3426B172573E80048241D /* RecipeDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeDetailsViewController.h; sourceTree = "<group>"; };
+		54C3426C172573E80048241D /* RecipeDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeDetailsViewController.m; sourceTree = "<group>"; };
+		54C34270172574000048241D /* Banana Shake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Banana Shake.png"; sourceTree = "<group>"; };
+		54C34271172574000048241D /* Green Smoothie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Green Smoothie.png"; sourceTree = "<group>"; };
+		54C34272172574000048241D /* Raspberry-Blueberry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Raspberry-Blueberry.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,14 +115,22 @@
 				54C3423F172573650048241D /* AppDelegate.h */,
 				54C34240172573650048241D /* AppDelegate.m */,
 				54C34248172573650048241D /* MainStoryboard.storyboard */,
-				54C3424B172573650048241D /* FirstViewController.h */,
-				54C3424C172573650048241D /* FirstViewController.m */,
 				54C3424E172573650048241D /* first.png */,
 				54C34250172573650048241D /* first@2x.png */,
-				54C34252172573650048241D /* SecondViewController.h */,
-				54C34253172573650048241D /* SecondViewController.m */,
 				54C34255172573650048241D /* second.png */,
 				54C34257172573650048241D /* second@2x.png */,
+				54C3425E172573DC0048241D /* DataModel.h */,
+				54C3425F172573DC0048241D /* DataModel.m */,
+				54C34260172573DC0048241D /* EditRecipeViewController.h */,
+				54C34261172573DC0048241D /* EditRecipeViewController.m */,
+				54C34262172573DC0048241D /* FavoritesViewController.h */,
+				54C34263172573DC0048241D /* FavoritesViewController.m */,
+				54C34267172573E80048241D /* SmoothiesViewController.h */,
+				54C34268172573E80048241D /* SmoothiesViewController.m */,
+				54C34269172573E80048241D /* Recipe.h */,
+				54C3426A172573E80048241D /* Recipe.m */,
+				54C3426B172573E80048241D /* RecipeDetailsViewController.h */,
+				54C3426C172573E80048241D /* RecipeDetailsViewController.m */,
 				54C34237172573650048241D /* Supporting Files */,
 			);
 			path = smoothies1;
@@ -113,6 +139,9 @@
 		54C34237172573650048241D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				54C34270172574000048241D /* Banana Shake.png */,
+				54C34271172574000048241D /* Green Smoothie.png */,
+				54C34272172574000048241D /* Raspberry-Blueberry.png */,
 				54C34238172573650048241D /* smoothies1-Info.plist */,
 				54C34239172573650048241D /* InfoPlist.strings */,
 				54C3423C172573650048241D /* main.m */,
@@ -184,6 +213,9 @@
 				54C34251172573650048241D /* first@2x.png in Resources */,
 				54C34256172573650048241D /* second.png in Resources */,
 				54C34258172573650048241D /* second@2x.png in Resources */,
+				54C34273172574000048241D /* Banana Shake.png in Resources */,
+				54C34274172574000048241D /* Green Smoothie.png in Resources */,
+				54C34275172574000048241D /* Raspberry-Blueberry.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,8 +228,12 @@
 			files = (
 				54C3423D172573650048241D /* main.m in Sources */,
 				54C34241172573650048241D /* AppDelegate.m in Sources */,
-				54C3424D172573650048241D /* FirstViewController.m in Sources */,
-				54C34254172573650048241D /* SecondViewController.m in Sources */,
+				54C34264172573DC0048241D /* DataModel.m in Sources */,
+				54C34265172573DC0048241D /* EditRecipeViewController.m in Sources */,
+				54C34266172573DC0048241D /* FavoritesViewController.m in Sources */,
+				54C3426D172573E80048241D /* SmoothiesViewController.m in Sources */,
+				54C3426E172573E80048241D /* Recipe.m in Sources */,
+				54C3426F172573E80048241D /* RecipeDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
