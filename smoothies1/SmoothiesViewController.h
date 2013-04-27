@@ -12,6 +12,7 @@
 
 // We have a weak reference to the shared Data Model object
 @property (nonatomic, assign) IBOutlet DataModel* dataModel;
+@property (nonatomic, retain) IBOutlet UIBarButtonItem * addRecipeBtn;
 
 - (IBAction)addRecipe;
 

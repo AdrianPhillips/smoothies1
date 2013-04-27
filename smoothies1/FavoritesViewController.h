@@ -1,3 +1,10 @@
+//
+//  FavoritesViewController.h
+//  Smoothies
+//
+//  Created by Adrian Phillips on 7/22/11.
+//  Copyright 2011 Home. All rights reserved.
+//
 
 @class DataModel;
 

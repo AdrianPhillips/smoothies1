@@ -1,3 +1,10 @@
+//
+//  DataModel.m
+//  Smoothies
+//
+//  Created by Adrian Phillips on 7/22/11.
+//  Copyright 2011 Home. All rights reserved.
+//
 
 #import "DataModel.h"
 #import "Recipe.h"
@@ -51,7 +58,7 @@ NSString* const FavoritesChangedNotification = @"Smoothies-FavoritesChanged";
 {
 	// Create the recipe list object
 	recipes = [[NSMutableArray arrayWithCapacity:10] retain];
-
+    
 	// And add a few recipes to it
 	Recipe* recipe = [[Recipe alloc] init];
 	recipe.recipeId = 1;
@@ -60,7 +67,7 @@ NSString* const FavoritesChangedNotification = @"Smoothies-FavoritesChanged";
 	recipe.image = [UIImage imageNamed:@"Banana Shake.png"];
 	[recipes addObject:recipe];
 	[recipe release];
-
+    
 	recipe = [[Recipe alloc] init];
 	recipe.recipeId = 2;
 	recipe.name = @"Green Smoothie";
@@ -68,7 +75,7 @@ NSString* const FavoritesChangedNotification = @"Smoothies-FavoritesChanged";
 	recipe.image = [UIImage imageNamed:@"Green Smoothie.png"];
 	[recipes addObject:recipe];
 	[recipe release];
-
+    
 	recipe = [[Recipe alloc] init];
 	recipe.recipeId = 3;
 	recipe.name = @"Raspberry-Blueberry";
@@ -76,7 +83,8 @@ NSString* const FavoritesChangedNotification = @"Smoothies-FavoritesChanged";
 	recipe.image = [UIImage imageNamed:@"Raspberry-Blueberry.png"];
 	[recipes addObject:recipe];
 	[recipe release];
-
+    
+    
 	// When the user adds a new recipe, this is the ID it will get. It is
 	// hardcoded here, but if we were actually loading the recipes from a
 	// file, we would determine what the highest recipeId was and then set
@@ -105,14 +113,14 @@ NSString* const FavoritesChangedNotification = @"Smoothies-FavoritesChanged";
 	// Also remove the recipe from the list of favorites
 	Recipe* recipe = [self recipeAtIndex:index];
 	[self removeFromFavorites:recipe];
-
+    
 	[self.recipes removeObjectAtIndex:index];
 }
 
 - (void)didChangeRecipe:(Recipe*)recipe
 {
 	[[NSNotificationCenter defaultCenter] postNotificationName:RecipesChangedNotification object:self];
-
+    
 	// If the name of the recipe was changed, the sort order of the favorites
 	// list may be wrong, so we reload the list of favorites as well.
 	self.sortedFavorites = nil;
@@ -133,7 +141,7 @@ NSString* const FavoritesChangedNotification = @"Smoothies-FavoritesChanged";
 {
 	// Create the favorites list object
 	NSArray* array = [[NSUserDefaults standardUserDefaults] objectForKey:FAVORITES_KEY];
-	self.favorites = [NSMutableArray arrayWithCapacity:array.count];
+	self.favorites = [[NSMutableArray arrayWithCapacity:array.count] retain];
 	for (NSNumber* number in array)
 	{
 		int recipeId = [number intValue];
@@ -168,7 +176,7 @@ NSString* const FavoritesChangedNotification = @"Smoothies-FavoritesChanged";
 				[sortedFavorites addObject:recipe];
 			}
 		}
-
+        
 		// Sort the list by last name
 		[sortedFavorites sortUsingSelector:@selector(compareName:)];
 	}
@@ -184,14 +192,14 @@ NSString* const FavoritesChangedNotification = @"Smoothies-FavoritesChanged";
 {
 	// Add the recipe's ID to the favorites list
 	[self.favorites addObject:[NSNumber numberWithInt:recipe.recipeId]];
-
+    
 	// Save the favorites to NSUserDefaults
 	[self saveFavorites];
-
+    
 	// We release the old sorted list and set it to nil. The next time anyone
 	// asks for it, it will be re-created from scratch.
 	self.sortedFavorites = nil;
-
+    
 	// Let any listeners know the list of favorites has changed
 	[[NSNotificationCenter defaultCenter] postNotificationName:FavoritesChangedNotification object:self];
 }

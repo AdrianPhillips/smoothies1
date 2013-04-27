@@ -1,12 +1,17 @@
+//
+//  RecipeDetailsViewController.h
+//  Smoothies
+//
+//  Created by Adrian Phillips on 7/22/11.
+//  Copyright 2011 Home. All rights reserved.
+//
 
 #import "EditRecipeViewController.h"
 
 @class DataModel;
 @class Recipe;
 
-/*
- * This screen shows additional information about a recipe.
- */
+
 @interface RecipeDetailsViewController : UIViewController <EditRecipeDelegate>
 {
 }
@@ -16,13 +21,12 @@
 @property (nonatomic, retain) IBOutlet UIButton* favoriteButton;
 @property (nonatomic, retain) IBOutlet UIBarButtonItem* editButton;
 
-// The data model object
-@property (nonatomic, assign) DataModel* dataModel;
 
-// The recipe that we will be showing
+@property (nonatomic, assign) DataModel* dataModel;
 @property (nonatomic, retain) Recipe* recipe;
 
 - (IBAction)favoriteTapped;
 - (IBAction)editRecipe;
 
 @end
+

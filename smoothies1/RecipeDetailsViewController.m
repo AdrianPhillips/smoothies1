@@ -1,12 +1,20 @@
+//
+//  RecipeDetailsViewController.m
+//  Smoothies
+//
+//  Created by Adrian Phillips on 7/22/11.
+//  Copyright 2011 Home. All rights reserved.
+//
 
 #import "RecipeDetailsViewController.h"
 #import "DataModel.h"
 #import "Recipe.h"
+#import "EditRecipeViewController.h"
 
 @implementation RecipeDetailsViewController
 
 @synthesize imageView, instructionsTextView, favoriteButton, editButton,
-			dataModel, recipe;
+dataModel, recipe;
 
 - (void)updateFavoriteButton
 {
@@ -15,7 +23,7 @@
 		title = @"√ Favorite";
 	else
 		title = @"Favorite";
-
+    
 	[self.favoriteButton setTitle:title forState:UIControlStateNormal];
 }
 
@@ -30,15 +38,15 @@
 {
 	[super viewDidLoad];
 	self.navigationItem.rightBarButtonItem = self.editButton;
-
+    
 	// Set the controls to their proper initial state
 	[self updateControls];
 	[self updateFavoriteButton];
 }
 
-- (void) didReceiveMemoryWarning
+- (void)viewDidUnload
 {
-	[super didReceiveMemoryWarning];
+	[super viewDidUnload];
 	self.imageView = nil;
 	self.instructionsTextView = nil;
 	self.favoriteButton = nil;
@@ -71,7 +79,7 @@
 		// Add this recipe's name to the list of favorites
 		[self.dataModel addToFavorites:self.recipe];
 	}
-
+    
 	// Update the toggle state of the button
 	[self updateFavoriteButton];
 }
@@ -80,13 +88,13 @@
 {
 	// Create the Edit Recipe screen
 	EditRecipeViewController* controller = [[EditRecipeViewController alloc] init];
-
+    
 	// Give it the data from our Recipe
 	controller.delegate = self;
 	controller.name = self.recipe.name;
 	controller.instructions = self.recipe.instructions;
 	controller.image = self.recipe.image;
-
+    
 	// And show it modally
 	[self presentViewController:controller animated:YES completion:nil];
 	[controller release];
@@ -104,7 +112,7 @@
 	
 	// Refresh our UI
 	[self updateControls];
-
+    
 	// Tell the data model that we changed the Recipe object
 	[self.dataModel didChangeRecipe:self.recipe];
 }
